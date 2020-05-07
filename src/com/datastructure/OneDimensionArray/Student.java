@@ -1,4 +1,4 @@
-package com.datastructure;
+package com.datastructure.OneDimensionArray;
 
 public class Student {
     private final String name;
