@@ -1,27 +1,26 @@
-package com.datastructure.LinkedList;
+package com.datastructure.DoubleLinkedList;
 
-public class LinkedListU<T> {
+public class DoubleLinkedList<T> {
     Node head;
 
-    public LinkedListU() {
+    public DoubleLinkedList() {
         head = null;
     }
 
     public void add(Object value) {
-        //create new node and pass null as next
-        Node newNode = new Node(value, null);
-        //if no node then head is newNode
+        Node newNode = new Node(value, null, null);
         if (head == null) {
             head = newNode;
         } else {
-            //if there is a node then add head to the next
             newNode.next = head;
+            head.previous = newNode;
             head = newNode;
         }
     }
 
     public void delete() {
         head = head.next;
+        head.previous = null;
 
     }
 

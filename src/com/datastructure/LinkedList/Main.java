@@ -2,9 +2,9 @@ package com.datastructure.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedListU<String> linkedlist = new LinkedListU<String>();
+        LinkedList<Integer> linkedlist = new LinkedList<Integer>();
 
-        linkedlist.add("Dollar");
+        linkedlist.add(1);
         linkedlist.add("Pound");
         linkedlist.add("Naira");
         linkedlist.add("Peso");
