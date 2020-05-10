@@ -1,18 +1,15 @@
-package com.datastructure.Stack.Array;
+package com.datastructure.Stack.DynamicArray;
 
 public class Main {
     public static void main(String[] args) {
-        StackArray<Integer> stackWithArray = new StackArray<Integer>(5);
-        stackWithArray.push(10);
-        stackWithArray.push(12);
-        stackWithArray.push(13);
-        stackWithArray.push(14);
-        stackWithArray.push(15);
-        stackWithArray.push(16);
-        while (!stackWithArray.isEmplty()) {
-            System.out.println(stackWithArray.pop());
-        }
-        stackWithArray.pop();
+        StackDynamicArray<Integer> stackWithDynamicArray = new StackDynamicArray<>(2);
+
+        stackWithDynamicArray.push(12);
+        stackWithDynamicArray.push(12);
+
+        System.out.println("Size stack:" + stackWithDynamicArray.getSize());
+        stackWithDynamicArray.push(12);
+        System.out.println("Size stack:" + stackWithDynamicArray.getSize());
 
     }
 }

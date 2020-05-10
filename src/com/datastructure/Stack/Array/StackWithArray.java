@@ -1,11 +1,11 @@
 package com.datastructure.Stack.Array;
 
-public class StackArray<T> {
+public class StackWithArray<T> {
     Object[] ArrayStack;
     int size;
     int top;
 
-    public StackArray(int size) {
+    public StackWithArray(int size) {
         this.size = size;
         ArrayStack = new Object[this.size];
         top = -1;
