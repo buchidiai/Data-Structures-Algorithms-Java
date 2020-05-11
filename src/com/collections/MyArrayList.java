@@ -2,7 +2,7 @@ package com.collections;
 
 import java.util.ArrayList;
 
-public class myArrayList {
+public class MyArrayList {
 
     public static void main(String[] args) {
         //arraylist of names
