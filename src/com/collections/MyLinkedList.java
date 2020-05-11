@@ -20,7 +20,5 @@ public class MyLinkedList {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
-
-
     }
 }
