@@ -16,9 +16,6 @@ public class Main {
 
 
         stackWithLinkedList.pop();
-        stackWithLinkedList.pop();
-        stackWithLinkedList.pop();
-        stackWithLinkedList.pop();
-        stackWithLinkedList.pop();
+       
     }
 }
