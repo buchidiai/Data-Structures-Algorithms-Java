@@ -13,5 +13,7 @@ public class Main {
 
         System.out.println("De-queue:" + q.DeQueue());
         System.out.println("De-queue:" + q.DeQueue());
+
+        q.printQueue();
     }
 }

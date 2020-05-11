@@ -3,21 +3,32 @@ package com.datastructure.Queue.DynamicArray;
 import java.util.Arrays;
 
 public class QueueDynamicArray<T> {
-    Object[] ArrayStack;
+    Object[] ArrayQueue;
+    int Rear;
+    int Front;
     int size;
-    int top;
 
     public QueueDynamicArray(int size) {
         this.size = size;
-        ArrayStack = new Object[this.size];
-        top = -1;
+        ArrayQueue = new Object[this.size];
+        Front = -1;
+        Rear = -1;
     }
 
-    public void push(Object newItem) {
-        ensureCapacity(top + 2);
+    public Boolean isFull() {
+        return (Rear == size - 1);
+    }
 
-        top = top + 1;
-        ArrayStack[top] = newItem;
+    public Boolean isEmplty() {
+        return (Front == -1 || Front > Rear);
+    }
+
+    public void Queue(Object newItem) {
+        ensureCapacity(Rear + 2);
+        Rear = Rear + 1;
+        ArrayQueue[Rear] = newItem;
+        if (Front == -1)
+            Front = 0;
     }
 
     public void ensureCapacity(int minCapacity) {
@@ -26,31 +37,22 @@ public class QueueDynamicArray<T> {
             int newCapacity = oldCapacity * 2;
             if (newCapacity < minCapacity)
                 newCapacity = minCapacity;
-            ArrayStack = Arrays.copyOf(ArrayStack, newCapacity);
+            ArrayQueue = Arrays.copyOf(ArrayQueue, newCapacity);
         }
-    }
-
-    public Boolean isFull() {
-        return (top == size - 1);
-    }
-
-    public T pop() {
-        if (isEmplty()) {
-            System.out.println("stack is empty");
-            return null;
-        }
-        T item = (T) ArrayStack[top];
-        top = top - 1;
-        return item;
-
-    }
-
-    public Boolean isEmplty() {
-        return (top == -1);
     }
 
     public int getSize() {
-        return ArrayStack.length;
+        return ArrayQueue.length;
+    }
+
+    public T DeQueue() {
+        if (isEmplty()) {
+            System.out.println("queue is empty");
+            return null;
+        }
+        T ObjectOut = (T) ArrayQueue[Front];
+        Front = Front + 1;
+        return ObjectOut;
     }
 
 
