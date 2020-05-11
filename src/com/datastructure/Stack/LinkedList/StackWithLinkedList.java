@@ -21,7 +21,7 @@ public class StackWithLinkedList<T> {
 
     public T pop() {
         if (top == null) {
-            System.out.println("stack is emplty");
+            System.out.println("stack is empty");
             return null;
         }
 
