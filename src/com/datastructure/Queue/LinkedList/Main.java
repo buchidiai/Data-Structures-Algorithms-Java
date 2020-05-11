@@ -3,19 +3,16 @@ package com.datastructure.Queue.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
-        QueueWithLinkedList<String> stackWithLinkedList = new QueueWithLinkedList<String>();
+        QueueWithLinkedList<String> q = new QueueWithLinkedList<String>();
+        q.Queue("John");
+        q.Queue("Lala");
+        q.Queue("Harold");
 
+        System.out.println(q.Dequeue());
+        System.out.println(q.Dequeue());
+        System.out.println(q.Dequeue());
+        System.out.println(q.Dequeue());
 
-
-        stackWithLinkedList.pop(); //empty
-        stackWithLinkedList.push("John");
-        stackWithLinkedList.push("Mike");
-        stackWithLinkedList.push("Jim");
-        stackWithLinkedList.push("JJ");
-
-
-
-        stackWithLinkedList.pop();
 
     }
 }

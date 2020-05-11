@@ -1,9 +1,9 @@
 package com.datastructure.DoubleLinkedList;
 
 public class Node {
-    Object value;
-    Node next;
-    Node previous;
+    public  Object value;
+    public Node next;
+    public Node previous;
 
     public Node(Object value, Node next, Node previous) {
         this.value = value;

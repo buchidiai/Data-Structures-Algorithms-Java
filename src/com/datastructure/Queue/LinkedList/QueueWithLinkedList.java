@@ -1,33 +1,39 @@
 package com.datastructure.Queue.LinkedList;
 
-import com.datastructure.LinkedList.Node;
+import com.datastructure.DoubleLinkedList.Node;
 
 public class QueueWithLinkedList<T> {
-    Node top;
+    Node Rear;
+    Node Front;
 
     public QueueWithLinkedList() {
-        top = null;
+        Rear = null;
+        Front = null;
     }
 
-    public void push(Object value) {
-        Node newNode = new Node(value, null);
-        if (top == null)
-            top = newNode;
-        else {
-            newNode.setNext(top);
-            top = newNode;
+    public void Queue(Object value) {
+        Node newNode = new Node(value, null, null);
+        if (Rear == null || Front == null) {
+            Rear = newNode;
+            Front = newNode;
+        } else {
+            newNode.next = null;
+            newNode.previous = Rear;
+            Rear.next = newNode;
+            Rear = newNode;
         }
     }
 
-    public T pop() {
-        if (top == null) {
-            System.out.println("stack is empty");
+    public T Dequeue() {
+        if (Rear == null || Front == null) {
+            System.out.println("queue is empty");
             return null;
         }
-
-        T value = (T) top.getValue();
-        top.setNext(top);
+        T value = (T) Front.value;
+        Front = Front.next;
+        if (Front != null)
+            Front.previous = null;
         return value;
-    }
 
+    }
 }
