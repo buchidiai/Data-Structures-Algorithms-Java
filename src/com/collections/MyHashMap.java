@@ -32,7 +32,7 @@ public class MyHashMap {
 
         //update hashmap
         hmap.put(1, "Get soft bread");
-        
+
         System.out.println(hmap.get(1));
 
 
