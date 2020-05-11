@@ -1,9 +1,9 @@
-package com.datastructure.Stack.LinkedList;
+package com.datastructure.Queue.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
-        StackWithLinkedList<String> stackWithLinkedList = new StackWithLinkedList<String>();
+        QueueWithLinkedList<String> stackWithLinkedList = new QueueWithLinkedList<String>();
 
 
 
