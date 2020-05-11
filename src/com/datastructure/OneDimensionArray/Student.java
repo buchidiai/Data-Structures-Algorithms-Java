@@ -1,6 +1,6 @@
 package com.datastructure.OneDimensionArray;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private final String name;
     private final int age;
 
@@ -16,4 +16,24 @@ public class Student {
     public int getAge() {
         return this.age;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        if (this.age == o.getAge())
+            return 0;
+        else if (this.age > o.getAge())
+            return 1;
+        else
+            return -1;
+    }
+
+
 }

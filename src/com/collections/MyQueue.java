@@ -1,5 +1,7 @@
 package com.collections;
 
+import com.datastructure.OneDimensionArray.Student;
+
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -21,7 +23,6 @@ public class MyQueue {
         System.out.println("**********priority queue**********");
         // PriorityQueue orders elements
         //duplicates allowed
-
         PriorityQueue<Integer> qp = new PriorityQueue<Integer>();
         qp.add(15);
         qp.add(11);
@@ -39,5 +40,17 @@ public class MyQueue {
         System.out.println(qp + "  qp");
 
 
+        System.out.println("**********priority queue for students**********");
+
+
+        PriorityQueue<Student> pStudends = new PriorityQueue<Student>();
+
+        pStudends.add(new Student("Hussein", 27));
+        pStudends.add(new Student("Jena", 2));
+        pStudends.add(new Student("Laya", 1));
+
+
+        System.out.println(pStudends.toString() + "pStudent");
+        System.out.println(pStudends.poll().getName());
     }
 }
