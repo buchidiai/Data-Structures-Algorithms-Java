@@ -27,12 +27,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        if (this.age == o.getAge())
-            return 0;
-        else if (this.age > o.getAge())
-            return 1;
-        else
-            return -1;
+        return Integer.compare(this.age, o.getAge());
     }
 
 

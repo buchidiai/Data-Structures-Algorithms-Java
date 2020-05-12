@@ -48,6 +48,8 @@ public class MyQueue {
         pStudends.add(new Student("Hussein", 27));
         pStudends.add(new Student("Jena", 2));
         pStudends.add(new Student("Laya", 1));
+        pStudends.add(new Student("Tim", 3));
+        pStudends.add(new Student("Alex", 5));
 
 
         System.out.println(pStudends.toString() + "pStudent");
