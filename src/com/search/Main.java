@@ -1,8 +1,5 @@
 package com.search;
 
-import com.search.BinarySearch.BinarySearch;
-import com.search.LinearSearch.LinearSearch;
-
 import java.util.Random;
 
 public class Main {
@@ -10,23 +7,27 @@ public class Main {
     public static void main(String[] args) {
 
         //new dataset created
-        DataSet data_1 = new DataSet(1000000);
-        DataSet data_2 = new DataSet(1000000);
+        DataSet data_set_1 = new DataSet(1000000);
+        DataSet data_set_2 = new DataSet(1000000);
+        DataSet data_set_3 = new DataSet(1000000);
 
         //random num generator
         Random rand = new Random();
 
         //value to search
-        int Search_1 = rand.nextInt(999999);
-        int Search_2 = rand.nextInt(999999);
+        final int Search = rand.nextInt(999999);
+
 
         LinearSearch ls = new LinearSearch();
         BinarySearch bs = new BinarySearch();
+        InterpolationSearch is = new InterpolationSearch();
 
 
-        ls.runSearch(data_1, Search_1);
+        ls.runSearch(data_set_1, Search);
         System.out.println("*************");
-        bs.runSearch(data_2, Search_2);
+        bs.runSearch(data_set_2, Search);
+        System.out.println("*************");
+        bs.runSearch(data_set_3, Search);
         System.out.println("*************");
     }
 

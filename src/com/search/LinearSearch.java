@@ -1,6 +1,4 @@
-package com.search.LinearSearch;
-
-import com.search.DataSet;
+package com.search;
 
 public class LinearSearch {
 
@@ -24,15 +22,16 @@ public class LinearSearch {
                 break;
             }
         }
-
-        if (IsFound == false) {
-            System.out.println("number not found");
-        }
         long endTime = System.nanoTime();
         long timeElapsed = endTime - startTime;
 
         System.out.println("Execution time in milliseconds : " +
                 timeElapsed / 1000000);
+
+        if (IsFound == false) {
+            System.out.println("number not found");
+        }
+
 
     }
 }
