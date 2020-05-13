@@ -20,8 +20,8 @@ public class BubbleSort {
         int temp = 0; //temp value holder
         for (int i = 0; i < n; i++)
             for (int j = 1; j < (n - i); j++) {
-                //check if the 0 (index) item in array in > 1 (index)
-                //set temp to 0 item in array
+                //check if the 0 (index) item in array is > 1 (index)
+                //set temp to 0 (current) item in array
                 //set 0 item to next item in index
                 //next item to temp
 
