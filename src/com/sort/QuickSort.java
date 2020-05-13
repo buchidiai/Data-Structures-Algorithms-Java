@@ -5,9 +5,13 @@ public class QuickSort {
     public static void main(String[] args) {
 
         int[] arr = {1, 50, 30, 10, 60, 80, 45, 32, 56, 768, 345, 73, 567, 23, 78, 29, 3, 32, 23};
+
+
         System.out.println("Before Sort");
         printArray(arr);
+
         QuickSort(arr, 0, arr.length - 1);
+
         System.out.println("\nAfter Sort");
         printArray(arr);
 
