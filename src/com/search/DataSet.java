@@ -1,8 +1,8 @@
 package com.search;
 
 public class DataSet {
-    int[] data;
-    int numberOfTries;
+    public int[] data;
+    public int numberOfTries;
 
     public DataSet(int size) {
         data = new int[size];
