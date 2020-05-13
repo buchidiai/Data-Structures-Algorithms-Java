@@ -14,18 +14,27 @@ public class SelectionSort {
     }
 
     static void SelectionSort(int[] arr) {
-        //loop through array
+
+        //1st loop
+        //loop through before last element in array
         for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
             //2nd loop
             for (int j = i + 1; j < arr.length; j++) {
+                //check if ( current index + 1 ) < current index
+                //set index to ( current index + 1 )
                 if (arr[j] < arr[index])
                     index = j;
             }
 
+            //1st loop
+            //check if current index from 2nd loop != index from 1st loop
             if (index != i) {
+                //set current index + 1 to temp
                 int temp = arr[index];
+                //set current index + 1 to current index
                 arr[index] = arr[i];
+                //set current index to current index + 1
                 arr[i] = temp;
             }
         }
